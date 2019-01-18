@@ -37,7 +37,7 @@ public class StudentList extends AppCompatActivity {
 
         studentListAdapter = new StudentListAdapter(StudentList.this, StaticStudentList.getStudentList());
 
-        //for list view
+        ////for list view
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
 
         student_list.setLayoutManager(mLayoutManager);
