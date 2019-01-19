@@ -1,7 +1,10 @@
 package com.gusto.student.util;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AlertDialog;
 
 import com.gusto.student.R;
@@ -28,6 +31,15 @@ public class Util {
                     public void onClick(DialogInterface dialoginterface, int i) {
                     }
                 }).show();
+    }
+
+    public static boolean isOnline(Context c) {
+        ConnectivityManager cm = (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
+        }
+        return false;
     }
 
 }

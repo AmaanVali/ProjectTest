@@ -34,7 +34,7 @@ public class StaticStudentList {
         studentObj_2.setActive(1);
 
         StudentObj studentObj_3 = new StudentObj();
-        studentObj_3.setId("STU003");
+        studentObj_3.setId("STU004");
         studentObj_3.setName("Soe Soe");
         studentObj_3.setAddress("Sanchung");
         studentObj_3.setPhone("09328432");
@@ -42,7 +42,7 @@ public class StaticStudentList {
         studentObj_3.setActive(1);
 
         StudentObj studentObj_4 = new StudentObj();
-        studentObj_4.setId("STU004");
+        studentObj_4.setId("STU005");
         studentObj_4.setName("Aung Aung");
         studentObj_4.setAddress("Sanchung");
         studentObj_4.setPhone("23423");
@@ -50,7 +50,7 @@ public class StaticStudentList {
         studentObj_4.setActive(1);
 
         StudentObj studentObj_5 = new StudentObj();
-        studentObj_5.setId("STU005");
+        studentObj_5.setId("STU006");
         studentObj_5.setName("Myo Lay");
         studentObj_5.setAddress("Sanchung");
         studentObj_5.setPhone("324324");

@@ -6,11 +6,14 @@ import android.text.TextUtils;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.gusto.student.db.DatabaseHelper;
+import com.j256.ormlite.android.apptools.OpenHelperManager;
 
 public class MyApplication extends Application {
 
     private RequestQueue requestQueue;
     private static final String TAG = "GustoStudent";
+    private DatabaseHelper databaseHelper = null;
 
     @Override
     public void onCreate() {
@@ -54,6 +57,20 @@ public class MyApplication extends Application {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public DatabaseHelper getDBHelper() {
+        if (databaseHelper == null) {
+            databaseHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
+        }
+        return databaseHelper;
+    }
+
+    public void CloseDB() {
+        if (databaseHelper != null) {
+            OpenHelperManager.releaseHelper();
+            databaseHelper = null;
         }
     }
 }
